@@ -1,0 +1,637 @@
+[gd_scene load_steps=7 format=3 uid="uid://d1okd52ktsg18"]
+
+[ext_resource type="PackedScene" uid="uid://p52l43d61ng6" path="res://Block.tscn" id="1_jm1uq"]
+[ext_resource type="PackedScene" uid="uid://b8qdds3jk86b5" path="res://Wall.tscn" id="1_ou4rc"]
+[ext_resource type="Script" path="res://Main.gd" id="1_qnjwy"]
+[ext_resource type="PackedScene" uid="uid://b7mrxt2xeo851" path="res://Ball.tscn" id="3_4slg4"]
+[ext_resource type="LabelSettings" uid="uid://w8i184huhipq" path="res://assets/fonts/Xolonium-Regular.tres" id="4_4agoc"]
+[ext_resource type="FontFile" uid="uid://dke8wk3cbfilj" path="res://assets/fonts/Xolonium-Regular.ttf" id="6_nkykw"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_qnjwy")
+
+[node name="WallLayer" type="CanvasLayer" parent="."]
+
+[node name="Left" type="Node2D" parent="WallLayer"]
+
+[node name="Wall" parent="WallLayer/Left" instance=ExtResource("1_ou4rc")]
+position = Vector2(224, 32)
+
+[node name="Wall2" parent="WallLayer/Left" instance=ExtResource("1_ou4rc")]
+position = Vector2(224, 96)
+
+[node name="Wall3" parent="WallLayer/Left" instance=ExtResource("1_ou4rc")]
+position = Vector2(224, 160)
+
+[node name="Wall4" parent="WallLayer/Left" instance=ExtResource("1_ou4rc")]
+position = Vector2(224, 224)
+
+[node name="Wall5" parent="WallLayer/Left" instance=ExtResource("1_ou4rc")]
+position = Vector2(224, 288)
+
+[node name="Wall6" parent="WallLayer/Left" instance=ExtResource("1_ou4rc")]
+position = Vector2(224, 352)
+
+[node name="Wall7" parent="WallLayer/Left" instance=ExtResource("1_ou4rc")]
+position = Vector2(224, 416)
+
+[node name="Wall8" parent="WallLayer/Left" instance=ExtResource("1_ou4rc")]
+position = Vector2(224, 480)
+
+[node name="Wall9" parent="WallLayer/Left" instance=ExtResource("1_ou4rc")]
+position = Vector2(224, 544)
+
+[node name="Wall10" parent="WallLayer/Left" instance=ExtResource("1_ou4rc")]
+position = Vector2(224, 608)
+
+[node name="Wall11" parent="WallLayer/Left" instance=ExtResource("1_ou4rc")]
+position = Vector2(224, 672)
+
+[node name="Right" type="Node2D" parent="WallLayer"]
+position = Vector2(704, 0)
+
+[node name="Wall" parent="WallLayer/Right" instance=ExtResource("1_ou4rc")]
+position = Vector2(224, 32)
+
+[node name="Wall2" parent="WallLayer/Right" instance=ExtResource("1_ou4rc")]
+position = Vector2(224, 96)
+
+[node name="Wall3" parent="WallLayer/Right" instance=ExtResource("1_ou4rc")]
+position = Vector2(224, 160)
+
+[node name="Wall4" parent="WallLayer/Right" instance=ExtResource("1_ou4rc")]
+position = Vector2(224, 224)
+
+[node name="Wall5" parent="WallLayer/Right" instance=ExtResource("1_ou4rc")]
+position = Vector2(224, 288)
+
+[node name="Wall6" parent="WallLayer/Right" instance=ExtResource("1_ou4rc")]
+position = Vector2(224, 352)
+
+[node name="Wall7" parent="WallLayer/Right" instance=ExtResource("1_ou4rc")]
+position = Vector2(224, 416)
+
+[node name="Wall8" parent="WallLayer/Right" instance=ExtResource("1_ou4rc")]
+position = Vector2(224, 480)
+
+[node name="Wall9" parent="WallLayer/Right" instance=ExtResource("1_ou4rc")]
+position = Vector2(224, 544)
+
+[node name="Wall10" parent="WallLayer/Right" instance=ExtResource("1_ou4rc")]
+position = Vector2(224, 608)
+
+[node name="Wall11" parent="WallLayer/Right" instance=ExtResource("1_ou4rc")]
+position = Vector2(224, 672)
+
+[node name="Top" type="Node2D" parent="WallLayer"]
+
+[node name="Wall" parent="WallLayer/Top" instance=ExtResource("1_ou4rc")]
+position = Vector2(288, 32)
+
+[node name="Wall2" parent="WallLayer/Top" instance=ExtResource("1_ou4rc")]
+position = Vector2(352, 32)
+
+[node name="Wall3" parent="WallLayer/Top" instance=ExtResource("1_ou4rc")]
+position = Vector2(416, 32)
+
+[node name="Wall4" parent="WallLayer/Top" instance=ExtResource("1_ou4rc")]
+position = Vector2(480, 32)
+
+[node name="Wall5" parent="WallLayer/Top" instance=ExtResource("1_ou4rc")]
+position = Vector2(544, 32)
+
+[node name="Wall6" parent="WallLayer/Top" instance=ExtResource("1_ou4rc")]
+position = Vector2(608, 32)
+
+[node name="Wall7" parent="WallLayer/Top" instance=ExtResource("1_ou4rc")]
+position = Vector2(672, 32)
+
+[node name="Wall8" parent="WallLayer/Top" instance=ExtResource("1_ou4rc")]
+position = Vector2(736, 32)
+
+[node name="Wall9" parent="WallLayer/Top" instance=ExtResource("1_ou4rc")]
+position = Vector2(800, 32)
+
+[node name="Wall10" parent="WallLayer/Top" instance=ExtResource("1_ou4rc")]
+position = Vector2(864, 32)
+
+[node name="Bottom" type="Node2D" parent="WallLayer"]
+position = Vector2(0, 640)
+
+[node name="Wall" parent="WallLayer/Bottom" instance=ExtResource("1_ou4rc")]
+position = Vector2(288, 32)
+
+[node name="Wall2" parent="WallLayer/Bottom" instance=ExtResource("1_ou4rc")]
+position = Vector2(352, 32)
+
+[node name="Wall3" parent="WallLayer/Bottom" instance=ExtResource("1_ou4rc")]
+position = Vector2(416, 32)
+
+[node name="Wall4" parent="WallLayer/Bottom" instance=ExtResource("1_ou4rc")]
+position = Vector2(480, 32)
+
+[node name="Wall5" parent="WallLayer/Bottom" instance=ExtResource("1_ou4rc")]
+position = Vector2(544, 32)
+
+[node name="Wall6" parent="WallLayer/Bottom" instance=ExtResource("1_ou4rc")]
+position = Vector2(608, 32)
+
+[node name="Wall7" parent="WallLayer/Bottom" instance=ExtResource("1_ou4rc")]
+position = Vector2(672, 32)
+
+[node name="Wall8" parent="WallLayer/Bottom" instance=ExtResource("1_ou4rc")]
+position = Vector2(736, 32)
+
+[node name="Wall9" parent="WallLayer/Bottom" instance=ExtResource("1_ou4rc")]
+position = Vector2(800, 32)
+
+[node name="Wall10" parent="WallLayer/Bottom" instance=ExtResource("1_ou4rc")]
+position = Vector2(864, 32)
+
+[node name="BlockLayer" type="CanvasLayer" parent="."]
+
+[node name="Block" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(336, 136)
+color = 1
+
+[node name="Block2" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(400, 136)
+color = 1
+
+[node name="Block3" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(464, 136)
+color = 1
+
+[node name="Block4" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(528, 136)
+color = 1
+
+[node name="Block5" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(592, 136)
+color = 1
+
+[node name="Block6" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(656, 136)
+color = 1
+
+[node name="Block7" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(720, 136)
+color = 1
+
+[node name="Block8" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(784, 136)
+color = 1
+
+[node name="Block57" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(368, 136)
+color = 1
+
+[node name="Block58" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(432, 136)
+color = 1
+
+[node name="Block59" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(496, 136)
+color = 1
+
+[node name="Block60" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(560, 136)
+color = 1
+
+[node name="Block61" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(624, 136)
+color = 1
+
+[node name="Block62" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(688, 136)
+color = 1
+
+[node name="Block63" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(752, 136)
+color = 1
+
+[node name="Block64" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(816, 136)
+color = 1
+
+[node name="Block9" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(336, 152)
+color = 2
+
+[node name="Block10" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(400, 152)
+color = 2
+
+[node name="Block11" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(464, 152)
+color = 2
+
+[node name="Block12" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(528, 152)
+color = 2
+
+[node name="Block13" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(592, 152)
+color = 2
+
+[node name="Block14" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(656, 152)
+color = 2
+
+[node name="Block15" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(720, 152)
+color = 2
+
+[node name="Block16" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(784, 152)
+color = 2
+
+[node name="Block65" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(368, 152)
+color = 2
+
+[node name="Block66" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(432, 152)
+color = 2
+
+[node name="Block67" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(496, 152)
+color = 2
+
+[node name="Block68" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(560, 152)
+color = 2
+
+[node name="Block69" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(624, 152)
+color = 2
+
+[node name="Block70" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(688, 152)
+color = 2
+
+[node name="Block71" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(752, 152)
+color = 2
+
+[node name="Block72" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(816, 152)
+color = 2
+
+[node name="Block17" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(336, 168)
+color = 3
+
+[node name="Block18" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(400, 168)
+color = 3
+
+[node name="Block19" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(464, 168)
+color = 3
+
+[node name="Block20" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(528, 168)
+color = 3
+
+[node name="Block21" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(592, 168)
+color = 3
+
+[node name="Block22" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(656, 168)
+color = 3
+
+[node name="Block23" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(720, 168)
+color = 3
+
+[node name="Block24" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(784, 168)
+color = 3
+
+[node name="Block73" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(368, 168)
+color = 3
+
+[node name="Block74" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(432, 168)
+color = 3
+
+[node name="Block75" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(496, 168)
+color = 3
+
+[node name="Block76" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(560, 168)
+color = 3
+
+[node name="Block77" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(624, 168)
+color = 3
+
+[node name="Block78" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(688, 168)
+color = 3
+
+[node name="Block79" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(752, 168)
+color = 3
+
+[node name="Block80" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(816, 168)
+color = 3
+
+[node name="Block25" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(336, 184)
+color = 4
+
+[node name="Block26" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(400, 184)
+color = 4
+
+[node name="Block27" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(464, 184)
+color = 4
+
+[node name="Block28" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(528, 184)
+color = 4
+
+[node name="Block29" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(592, 184)
+color = 4
+
+[node name="Block30" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(656, 184)
+color = 4
+
+[node name="Block31" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(720, 184)
+color = 4
+
+[node name="Block32" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(784, 184)
+color = 4
+
+[node name="Block81" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(368, 184)
+color = 4
+
+[node name="Block82" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(432, 184)
+color = 4
+
+[node name="Block83" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(496, 184)
+color = 4
+
+[node name="Block84" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(560, 184)
+color = 4
+
+[node name="Block85" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(624, 184)
+color = 4
+
+[node name="Block86" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(688, 184)
+color = 4
+
+[node name="Block87" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(752, 184)
+color = 4
+
+[node name="Block88" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(816, 184)
+color = 4
+
+[node name="Block33" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(336, 200)
+color = 5
+
+[node name="Block34" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(400, 200)
+color = 5
+
+[node name="Block35" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(464, 200)
+color = 5
+
+[node name="Block36" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(528, 200)
+color = 5
+
+[node name="Block37" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(592, 200)
+color = 5
+
+[node name="Block38" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(656, 200)
+color = 5
+
+[node name="Block39" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(720, 200)
+color = 5
+
+[node name="Block40" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(784, 200)
+color = 5
+
+[node name="Block89" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(368, 200)
+color = 5
+
+[node name="Block90" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(432, 200)
+color = 5
+
+[node name="Block91" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(496, 200)
+color = 5
+
+[node name="Block92" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(560, 200)
+color = 5
+
+[node name="Block93" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(624, 200)
+color = 5
+
+[node name="Block94" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(688, 200)
+color = 5
+
+[node name="Block95" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(752, 200)
+color = 5
+
+[node name="Block96" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(816, 200)
+color = 5
+
+[node name="Block41" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(336, 216)
+color = 6
+
+[node name="Block42" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(400, 216)
+color = 6
+
+[node name="Block43" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(464, 216)
+color = 6
+
+[node name="Block44" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(528, 216)
+color = 6
+
+[node name="Block45" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(592, 216)
+color = 6
+
+[node name="Block46" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(656, 216)
+color = 6
+
+[node name="Block47" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(720, 216)
+color = 6
+
+[node name="Block48" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(784, 216)
+color = 6
+
+[node name="Block97" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(368, 216)
+color = 6
+
+[node name="Block98" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(432, 216)
+color = 6
+
+[node name="Block99" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(496, 216)
+color = 6
+
+[node name="Block100" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(560, 216)
+color = 6
+
+[node name="Block101" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(624, 216)
+color = 6
+
+[node name="Block102" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(688, 216)
+color = 6
+
+[node name="Block103" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(752, 216)
+color = 6
+
+[node name="Block104" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(816, 216)
+color = 6
+
+[node name="Block49" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(336, 232)
+color = 7
+
+[node name="Block50" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(400, 232)
+color = 7
+
+[node name="Block51" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(464, 232)
+color = 7
+
+[node name="Block52" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(528, 232)
+color = 7
+
+[node name="Block53" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(592, 232)
+color = 7
+
+[node name="Block54" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(656, 232)
+color = 7
+
+[node name="Block55" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(720, 232)
+color = 7
+
+[node name="Block56" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(784, 232)
+color = 7
+
+[node name="Block105" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(368, 232)
+color = 7
+
+[node name="Block106" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(432, 232)
+color = 7
+
+[node name="Block107" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(496, 232)
+color = 7
+
+[node name="Block108" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(560, 232)
+color = 7
+
+[node name="Block109" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(624, 232)
+color = 7
+
+[node name="Block110" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(688, 232)
+color = 7
+
+[node name="Block111" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(752, 232)
+color = 7
+
+[node name="Block112" parent="BlockLayer" instance=ExtResource("1_jm1uq")]
+position = Vector2(816, 232)
+color = 7
+
+[node name="MainLayer" type="CanvasLayer" parent="."]
+
+[node name="Ball" parent="MainLayer" instance=ExtResource("3_4slg4")]
+position = Vector2(464, 488)
+scale = Vector2(0.25, 0.25)
+
+[node name="UILayer" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="LabelSpeed" type="Label" parent="UILayer"]
+offset_left = 16.0
+offset_top = 592.0
+offset_right = 122.0
+offset_bottom = 625.0
+text = "SPEED: "
+label_settings = ExtResource("4_4agoc")
+
+[node name="Caption" type="Node2D" parent="UILayer"]
+
+[node name="ColorRect" type="ColorRect" parent="UILayer/Caption"]
+offset_top = 264.0
+offset_right = 1152.0
+offset_bottom = 376.0
+color = Color(0, 0, 0, 0.501961)
+
+[node name="Label" type="Label" parent="UILayer/Caption"]
+offset_top = 256.0
+offset_right = 1152.0
+offset_bottom = 377.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("6_nkykw")
+theme_override_font_sizes/font_size = 64
+text = "READY"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true

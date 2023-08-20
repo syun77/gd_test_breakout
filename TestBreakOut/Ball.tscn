@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://b7mrxt2xeo851"]
+
+[ext_resource type="Script" path="res://Ball.gd" id="1_6joe0"]
+[ext_resource type="Texture2D" uid="uid://c51wmyr788nlm" path="res://assets/images/tako2.png" id="2_pu8nc"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mbxjr"]
+radius = 64.0
+
+[node name="Ball" type="CharacterBody2D"]
+script = ExtResource("1_6joe0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_pu8nc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_mbxjr")
