@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://d1okd52ktsg18"]
+[gd_scene load_steps=8 format=3 uid="uid://d1okd52ktsg18"]
 
-[ext_resource type="PackedScene" uid="uid://p52l43d61ng6" path="res://Block.tscn" id="1_jm1uq"]
-[ext_resource type="PackedScene" uid="uid://b8qdds3jk86b5" path="res://Wall.tscn" id="1_ou4rc"]
+[ext_resource type="PackedScene" uid="uid://p52l43d61ng6" path="res://src/Block.tscn" id="1_jm1uq"]
+[ext_resource type="PackedScene" uid="uid://b8qdds3jk86b5" path="res://src/Wall.tscn" id="1_ou4rc"]
 [ext_resource type="Script" path="res://Main.gd" id="1_qnjwy"]
-[ext_resource type="PackedScene" uid="uid://b7mrxt2xeo851" path="res://Ball.tscn" id="3_4slg4"]
+[ext_resource type="PackedScene" uid="uid://b7mrxt2xeo851" path="res://src/Ball.tscn" id="3_4slg4"]
 [ext_resource type="LabelSettings" uid="uid://w8i184huhipq" path="res://assets/fonts/Xolonium-Regular.tres" id="4_4agoc"]
+[ext_resource type="PackedScene" uid="uid://bbxkylso1gdx2" path="res://src/Paddle.tscn" id="5_1vx0e"]
 [ext_resource type="FontFile" uid="uid://dke8wk3cbfilj" path="res://assets/fonts/Xolonium-Regular.ttf" id="6_nkykw"]
 
 [node name="Main" type="Node2D"]
@@ -113,39 +114,6 @@ position = Vector2(736, 32)
 position = Vector2(800, 32)
 
 [node name="Wall10" parent="WallLayer/Top" instance=ExtResource("1_ou4rc")]
-position = Vector2(864, 32)
-
-[node name="Bottom" type="Node2D" parent="WallLayer"]
-position = Vector2(0, 640)
-
-[node name="Wall" parent="WallLayer/Bottom" instance=ExtResource("1_ou4rc")]
-position = Vector2(288, 32)
-
-[node name="Wall2" parent="WallLayer/Bottom" instance=ExtResource("1_ou4rc")]
-position = Vector2(352, 32)
-
-[node name="Wall3" parent="WallLayer/Bottom" instance=ExtResource("1_ou4rc")]
-position = Vector2(416, 32)
-
-[node name="Wall4" parent="WallLayer/Bottom" instance=ExtResource("1_ou4rc")]
-position = Vector2(480, 32)
-
-[node name="Wall5" parent="WallLayer/Bottom" instance=ExtResource("1_ou4rc")]
-position = Vector2(544, 32)
-
-[node name="Wall6" parent="WallLayer/Bottom" instance=ExtResource("1_ou4rc")]
-position = Vector2(608, 32)
-
-[node name="Wall7" parent="WallLayer/Bottom" instance=ExtResource("1_ou4rc")]
-position = Vector2(672, 32)
-
-[node name="Wall8" parent="WallLayer/Bottom" instance=ExtResource("1_ou4rc")]
-position = Vector2(736, 32)
-
-[node name="Wall9" parent="WallLayer/Bottom" instance=ExtResource("1_ou4rc")]
-position = Vector2(800, 32)
-
-[node name="Wall10" parent="WallLayer/Bottom" instance=ExtResource("1_ou4rc")]
 position = Vector2(864, 32)
 
 [node name="BlockLayer" type="CanvasLayer" parent="."]
@@ -601,11 +569,15 @@ color = 7
 [node name="MainLayer" type="CanvasLayer" parent="."]
 
 [node name="Ball" parent="MainLayer" instance=ExtResource("3_4slg4")]
-position = Vector2(464, 488)
-scale = Vector2(0.25, 0.25)
+position = Vector2(336, 304)
+
+[node name="Paddle" parent="MainLayer" instance=ExtResource("5_1vx0e")]
+position = Vector2(480, 584)
+
+[node name="SpawnBall" type="Marker2D" parent="MainLayer"]
+position = Vector2(336, 304)
 
 [node name="UILayer" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="LabelSpeed" type="Label" parent="UILayer"]
 offset_left = 16.0
@@ -615,7 +587,24 @@ offset_bottom = 625.0
 text = "SPEED: "
 label_settings = ExtResource("4_4agoc")
 
+[node name="LabelScore" type="Label" parent="UILayer"]
+offset_left = 16.0
+offset_top = 8.0
+offset_right = 122.0
+offset_bottom = 41.0
+text = "SCORE: 123456"
+label_settings = ExtResource("4_4agoc")
+
+[node name="LabelBall" type="Label" parent="UILayer"]
+offset_left = 16.0
+offset_top = 40.0
+offset_right = 224.0
+offset_bottom = 73.0
+text = "BALL x 2"
+label_settings = ExtResource("4_4agoc")
+
 [node name="Caption" type="Node2D" parent="UILayer"]
+visible = false
 
 [node name="ColorRect" type="ColorRect" parent="UILayer/Caption"]
 offset_top = 264.0
