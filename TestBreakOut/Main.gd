@@ -16,10 +16,10 @@ const DEADLINE_Y = 800 # 死亡判定.
 
 ## 状態.
 enum eState {
-	READY,
-	MAIN,
-	GAMEOVER,
-	GAMECLEAR,
+	READY, # 開始.
+	MAIN, # メイン.
+	GAMEOVER, # ゲームオーバー.
+	GAMECLEAR, # ゲームクリア.
 }
 
 # ------------------------------------------------------
@@ -77,7 +77,7 @@ func _update_ready(delta:float) -> void:
 ## 更新 > メイン.
 func _update_main(delta:float) -> void:
 	if _block_layer.get_child_count() == 0:
-		# ブロッがすべてなくなればクリア.
+		# ブロックがすべてなくなればクリア.
 		_state = eState.GAMECLEAR
 		return
 	
